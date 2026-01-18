@@ -18,7 +18,7 @@
 <script>
 
 
-    import {inlineMathHtml} from "src/commons/utils/math-util";
+    import {inlineMathHtml} from "src/q-commons/utils/math-util";
 
     export default {
         name: "an-inline-math",

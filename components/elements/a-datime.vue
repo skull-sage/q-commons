@@ -10,7 +10,7 @@
 
 <script>
 
-import {fAgoFromNow, fDateTime} from 'src/commons/utils/lang-util'
+import {fAgoFromNow, fDateTime} from 'src/q-commons/utils/lang-util'
 
 export default {
   name: "a-date-time",

@@ -21,7 +21,7 @@
 
 <script>
 import AField from './a-field.vue'
-import {calcElmBox} from 'src/commons/utils/dom-util'
+import {calcElmBox} from 'src/q-commons/utils/dom-util'
 export default {
   name: "an-image-input",
   components: {AField},

@@ -18,7 +18,7 @@
   import buildSchema from './schema-builder'
   import menuBuilder from './plugins/menu-selection-plugin'
   import nodeViewRegistry from './config-nodeview'
-  import {htmlStrToDom} from "src/commons/utils/dom-util";
+  import {htmlStrToDom} from "src/q-commons/utils/dom-util";
   import EditorMenu from "./editor-menus/editor-menu";
 
   export default {

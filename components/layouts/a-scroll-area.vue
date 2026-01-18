@@ -9,7 +9,7 @@
 </template>
 
 <script>
-  import {calcElmBox} from 'src/commons/utils/dom-util.js'
+  import {calcElmBox} from 'src/q-commons/utils/dom-util.js'
 
     export default {
         name: "a-scroll-area",

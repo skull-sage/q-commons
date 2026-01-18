@@ -1,42 +1,41 @@
-import {QNotify} from '../../boot/q-notify';
+import { QNotify } from '../../boot/q-notify';
 
 const Data_fetch =
+{
+  data() {
+    return {
+      reqTrying: {},
+    }
+  },
+  methods:
   {
-    data(){
-      return {
-        reqTrying : {},
-      }
+    initReq(name$) {
+      this.reqTrying[name$] = true;
+
     },
-    methods:
-      {
-        initReq(name$){
-          this.reqTrying[name$] = true;
 
-        },
+    reqSuccess(name$) {
+      let successMsg
+      if (this.$options.reqMsg[name$])
+        successMsg = this.$options.reqMsg[name$].success;
 
-        reqSuccess(name$){
-          let successMsg
-          if( this.$options.reqMsg[name$])
-             successMsg = this.$options.reqMsg[name$].success;
+      if (successMsg)
+        QNotify.positive(successMsg);
 
-          if(successMsg)
-            QNotify.positive(successMsg);
+      delete this.reqTrying[name$];
+    },
 
-          delete this.reqTrying[name$];
-        },
+    reqFailed(name$) {
+      let failMsg;
+      if (this.$options.reqMsg[name$])
+        failMsg = this.$options.reqMsg[name$].fail;
 
-        reqFailed(name$)
-        {
-          let failMsg;
-          if( this.$options.reqMsg[name$])
-            failMsg = this.$options.reqMsg[name$].fail;
+      if (failMsg)
+        QNotify.negative(this.reqTrying[name$].fail);
 
-          if(failMsg)
-            QNotify.negative(this.reqTrying[name$].fail);
-
-          delete this.reqTrying[name$];
-        }
-      }
+      delete this.reqTrying[name$];
+    }
   }
+}
 
 export default Data_fetch;

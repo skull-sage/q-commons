@@ -30,7 +30,7 @@
 <script>
 import utlDebounce from 'lodash/debounce'
 import {findSelectedNodeOfType} from "../utils";
-import {blockMathHtml} from "src/commons/utils/math-util";
+import {blockMathHtml} from "src/q-commons/utils/math-util";
 export default {
   name: "block-math-input",
   props: ['editorView'],

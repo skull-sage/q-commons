@@ -19,7 +19,7 @@
 </template>
 
 <script>
-  import {calcElmBox, calcScreenSize} from 'src/commons/utils/dom-util.js'
+  import {calcElmBox, calcScreenSize} from 'src/q-commons/utils/dom-util.js'
 
   let screenSize = calcScreenSize();
 

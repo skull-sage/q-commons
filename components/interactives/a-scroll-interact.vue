@@ -11,7 +11,7 @@
 </template>
 
 <script>
-  import {calcElmBox} from 'src/commons/utils/dom-util'
+  import {calcElmBox} from 'src/q-commons/utils/dom-util'
   import ANIME from 'animejs'
 
   export default {
